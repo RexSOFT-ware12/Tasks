@@ -1,0 +1,353 @@
+/* Colors */
+:root {
+	--primary-color: #00b4d8;
+	--secondary-color: #f8f9fa;
+	--text-color: #212529;
+  }
+  
+  /* Global styles */
+  * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  body {
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.5;
+  }
+  
+  a {
+	color: var(--primary-color);
+	text-decoration: none;
+  }
+  
+  button {
+	background-color: var(--primary-color); 
+	border: none;
+	color: var(--secondary-color);
+	cursor: pointer;
+	font-size: 16px;
+	padding: 10px 20px;
+	border-radius: 5px;
+  	margin-left: 10px;
+  }
+  
+  button:hover {
+	opacity: 0.8;
+  }
+
+  .fa-trash:hover {
+	color: #f44336;
+  }
+  
+  .fa-pencil-alt:hover {
+	color: var(--primary-color);
+  }
+  
+  /* Layout styles */
+  .main_container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  .navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	margin-bottom: 20px;
+  }
+  
+  .navbar h1 {
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+  }
+  
+  .white_btn {
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+	border: 1px solid var(--text-color);
+	transition: background-color 0.2s ease;
+  }
+  
+  .white_btn:hover {
+	background-color: var(--text-color);
+	color: var(--secondary-color);
+  }
+  
+  /* Create task form */
+  .create_task_form {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+
+  
+  
+  .create_task_input {
+	flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  font-size: 18px;
+  color: var(--text-color);
+  background-color: transparent;
+  transition: border-color 0.3s ease;
+  }
+
+  .create-task-input:focus {
+	outline: none;
+	border-color: var(--secondary-color);
+  }
+
+  .create-task-btn {
+	background-color: var(--primary-color);
+	color: #fff;
+	font-size: 18px;
+	padding: 10px 20px;
+	margin-left: 10px;
+	border-radius: 10px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .create-task-btn:hover {
+	background-color: #27ae60;
+  }
+
+  .create-task-btn:focus {
+	outline: none;
+	background-color: #fff;
+	box-shadow: 0px 3px 6px 0px rgb(0 0 0 / 16%);
+  }
+  
+  .filters_container {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 20px;
+	align-items: center;
+  }
+  
+  .filters_container label {
+	margin-left: 20px;
+	margin-right: 10px;
+	font-size: 18px;
+	color: var(--text-color);
+  }
+  
+  .filters_container input[type="radio"] {
+	margin-right: 10px;
+  }
+  
+  
+/* Search */
+.search-container {
+	position: relative;
+	margin-bottom: 20px;
+  }
+  
+  .search_input {
+	flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  font-size: 18px;
+  color: var(--text-color);
+  background-color: transparent;
+  transition: border-color 0.3s ease;
+  }
+  
+  .search-input:focus {
+	outline: none;
+	border-color: var(--secondary-color);
+  }
+  
+  .search_btn:focus {
+	outline: none;
+	background-color: #fff;
+	box-shadow: 0px 3px 6px 0px rgb(0 0 0 / 16%);
+  }
+
+  .search_btn {
+	background-color: var(--primary-color);
+	color: #fff;
+	border-radius: 10px;
+	font-size: 18px;
+	padding: 10px 20px;
+	margin-left: 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+
+  
+/* Task List */
+.task_list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+  }
+  .empty_message{
+	text-align: center;
+  }
+
+  .task {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .completed_task {
+	display: flex;
+	align-items: center;
+	opacity: 0.5;
+	margin-bottom: 10px;
+	background-color: #f0f0f0;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .checkbox {
+	margin-right: 10px;
+  }
+  
+  .task_text {
+	flex-grow: 1;
+	font-size: 18px;
+  }
+  
+  .actions {
+	display: flex;
+	align-items: center;
+  }
+  
+  .task_checkbox {
+	margin-right: 10px;
+  }
+  
+  .task_text_content {
+	flex: 1;
+  }
+  
+  .task_text_content p {
+	font-size: 16px;
+	margin-bottom: 5px;
+  }
+  
+  .task_text_icons button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	margin-left: 10px;
+  }
+  
+  .task_text_icons button i {
+	font-size: 16px;
+  }
+  
+
+  /* Message */
+.message-container {
+margin-top: 20px;
+padding: 10px;
+background-color: var(--primary-color);
+color: #fff;
+border-radius: 5px;
+display: none;
+}
+
+.message-container.show {
+display: block;
+}
+
+.edit_modal_container {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	bottom: 0 !important;
+	right: 0 !important;
+	background-color: rgba(0, 0, 0, 0.6) !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+  }
+  
+  .edit_modal {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	max-width: 500px;
+	width: 100%;
+  }
+  
+  .edit_modal_input input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+  }
+  
+  .edit_modal_btn button {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  .pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+  }
+  
+  .pagination button {
+	background-color: white;
+	border: 1px solid #ccc;
+	color: #555;
+	cursor: pointer;
+	margin: 0.5rem;
+	padding: 0.25rem 0.5rem;
+  }
+  
+  .pagination button:hover {
+	background-color: #f5f5f5;
+  }
+  
+  .pagination button.active {
+	background-color: #007bff;
+	border-color: #007bff;
+	color: white;
+  }
+  
+  .pagination button.disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+  }
+  
+  @media only screen and (max-width: 600px) {
+	.pagination {
+	  flex-direction: column;
+	}
+  }
+  
